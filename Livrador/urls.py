@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
 
-    url(r'^supermarket/sign-in/$', auth_views.login, {'template_name':'supermarket/sign-in.html'}, name='supermarket_sign_in'),
+    url(r'^supermarket/sign-in/', auth_views.login, {'template_name':'supermarket/sign-in.html'}, name='supermarket_sign_in'),
     url(r'^supermarket/sign-out/', auth_views.logout, {'next_page':'/'}, name='supermarket_sign_out'),
     url(r'^supermarket/sign-up/', views.supermarket_sign_up, name='supermarket_sign_up'),
 
